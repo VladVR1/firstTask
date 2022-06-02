@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".LoginUser"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <EditText
+            android:id="@+id/nameUser"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autofillHints="user_name"
+            android:hint="@string/user_name"
+            android:inputType="textPersonName"
+            android:textColorHint="@color/gray"
+            android:textSize="@dimen/size_text_fragment"
+            tools:ignore="SpUsage" />
+
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autofillHints="password"
+            android:hint="@string/password"
+            android:inputType="textPassword"
+            android:textColorHint="@color/gray"
+            android:textSize="@dimen/size_text_fragment"
+            app:layout_constraintTop_toBottomOf="@+id/nameUser"
+            tools:ignore="SpUsage">
+
+        </EditText>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/button_margin_top"
+            style="@style/Btn_style" />
+    </LinearLayout>
+</layout>
