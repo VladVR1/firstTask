@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav"
+    app:startDestination="@id/splashScreen">
+
+    <fragment
+        android:id="@+id/splashScreen"
+        android:name="com.example.myapplication.SplashScreen"
+        android:label="fragment_splash_screen"
+        tools:layout="@layout/fragment_splash_screen" >
+        <action
+            android:id="@+id/action_splashScreen_to_nameUser"
+            app:destination="@id/inputUser" />
+    </fragment>
+    <fragment
+        android:id="@+id/inputUser"
+        android:name="com.example.myapplication.InputUser"
+        android:label="fragment_name_user"
+        tools:layout="@layout/fragment_input_user" >
+        <action
+            android:id="@+id/action_nameUser_to_radioBtn"
+            app:destination="@id/radioBtn" />
+    </fragment>
+    <fragment
+        android:id="@+id/radioBtn"
+        android:name="com.example.myapplication.RadioBtn"
+        android:label="fragment_radio_btn"
+        tools:layout="@layout/fragment_radio_btn" >
+        <action
+            android:id="@+id/action_radioBtn_to_checkbox2"
+            app:destination="@id/checkbox2" />
+    </fragment>
+    <fragment
+        android:id="@+id/checkbox2"
+        android:name="com.example.myapplication.Checkbox"
+        android:label="fragment_checkbox"
+        tools:layout="@layout/fragment_checkbox" >
+        <action
+            android:id="@+id/action_checkbox2_to_result"
+            app:destination="@id/result" />
+    </fragment>
+    <fragment
+        android:id="@+id/result"
+        android:name="com.example.myapplication.Result"
+        android:label="fragment_result"
+        tools:layout="@layout/fragment_result" />
+</navigation>
