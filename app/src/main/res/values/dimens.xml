@@ -3,4 +3,5 @@
     <dimen name="padding_">16dp</dimen>
     <dimen name="tittle">30dp</dimen>
     <dimen name="margin_top">25dp</dimen>
+    <dimen name="text_size">20dp</dimen>
 </resources>

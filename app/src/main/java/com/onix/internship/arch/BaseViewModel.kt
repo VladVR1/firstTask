@@ -10,14 +10,13 @@ import kotlinx.coroutines.launch
 open class BaseViewModel : ViewModel() {
 
     val loading = MutableLiveData(false)
-    val errorEvent = SingleLiveEvent<String>()
 
 
     protected fun launch(block: suspend CoroutineScope.() -> Unit) =
         viewModelScope.launch(block = block)
 
     protected fun onLoading(state: Boolean) {
-
+        loading.postValue(state)
     }
 
 }

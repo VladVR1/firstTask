@@ -8,13 +8,13 @@ import androidx.annotation.LayoutRes
 import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
 import androidx.fragment.app.Fragment
-import com.google.android.material.snackbar.Snackbar
 import com.onix.internship.arch.ext.hideKeyboard
 
 abstract class BaseFragment<T : ViewDataBinding>(@LayoutRes private val resId: Int) : Fragment() {
 
-    protected lateinit var binding: T
+    lateinit var binding: T
     protected abstract val viewModel: BaseViewModel
+    protected open fun setObservers() {}
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -28,6 +28,7 @@ abstract class BaseFragment<T : ViewDataBinding>(@LayoutRes private val resId: I
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.lifecycleOwner = viewLifecycleOwner
+        setObservers()
         onBaseObservers()
     }
 
