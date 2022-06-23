@@ -8,23 +8,6 @@
     <fragment
         android:id="@+id/splashFragment"
         android:name="com.onix.internship.ui.splash.SplashFragment"
-        android:label="SplashFragment" >
-        <action
-            android:id="@+id/action_splashFragment_to_firstMoveFragment"
-            app:destination="@id/firstMoveFragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/canvasFragment"
-        android:name="com.onix.internship.ui.game.CanvasFragment"
-        android:label="CanvasFragment" />
-    <fragment
-        android:id="@+id/firstMoveFragment"
-        android:name="com.onix.internship.ui.game.FirstMoveFragment"
-        android:label="fragment_first_move"
-        tools:layout="@layout/fragment_first_move" >
-        <action
-            android:id="@+id/action_firstMoveFragment_to_canvasFragment"
-            app:destination="@id/canvasFragment" />
-    </fragment>
+        android:label="SplashFragment" />
 
 </navigation>
