@@ -8,6 +8,15 @@
     <fragment
         android:id="@+id/splashFragment"
         android:name="com.onix.internship.ui.splash.SplashFragment"
-        android:label="SplashFragment" />
+        android:label="SplashFragment" >
+        <action
+            android:id="@+id/action_splashFragment_to_wiFiFragment"
+            app:destination="@id/wiFiFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/wiFiFragment"
+        android:name="com.onix.internship.scanner.WiFiFragment"
+        android:label="fragment_wi_fi"
+        tools:layout="@layout/fragment_wi_fi" />
 
 </navigation>

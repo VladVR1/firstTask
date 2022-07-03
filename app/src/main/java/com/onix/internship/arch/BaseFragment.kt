@@ -36,4 +36,5 @@ abstract class BaseFragment<T : ViewDataBinding>(@LayoutRes private val resId: I
         viewModel.loading.observe(viewLifecycleOwner) { hideKeyboard() }
     }
 
+
 }
